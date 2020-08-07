@@ -33,6 +33,5 @@ jobs:
       - store_test_results:
           path: test-results.xml
       - run:
-          name: deploy 
+          name: deploy
           command: curl -X POST -d {} ${hook}
-

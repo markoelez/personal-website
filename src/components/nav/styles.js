@@ -13,7 +13,7 @@ export const StyledNav = styled.nav`
   width: 100%;
   padding: 25px 10px;
 
-  ${({ borderType }) => handleBorderType(borderType)};
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
   background: ${(props) => props.bgColor};
   color: ${(props) => props.textColor};
@@ -24,21 +24,6 @@ export const StyledNav = styled.nav`
     padding: 25px;
   }
 `
-
-const handleBorderType = (type) => {
-  switch (type) {
-    case 'light':
-      return css`
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      `
-    case 'dark':
-      return css`
-        border-bottom: 1px solid rgb(241, 241, 241);
-      `
-    default:
-      return
-  }
-}
 
 export const Content = styled.div`
   display: flex;

@@ -70,7 +70,12 @@ const Home = () => {
             <SocialIcon href="http://github.com/markoelez" target="_blank">
               GitHub
             </SocialIcon>
-            <SocialIcon>Resume</SocialIcon>
+            <SocialIcon
+              href="https://mlz-personal-website.s3.us-east-2.amazonaws.com/RESUME.pdf"
+              target="_blank"
+            >
+              Resume
+            </SocialIcon>
           </IconRow>
         </Main>
       </Container>
