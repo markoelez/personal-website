@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { font, color, device } from '@utils/styles'
+import { font, color, device, mixin } from '@utils/styles'
 
 export const Page = styled.div`
   text-align: center;
@@ -116,4 +116,41 @@ export const ArrowWrapper = styled(motion.div)`
 
   width: 30px;
   height: 30px;
+`
+
+export const IconRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding-top: 50px;
+
+  width: 60%;
+`
+
+export const SocialIcon = styled.a`
+  ${font.size(14)};
+  ${font.bold};
+
+  text-transform: uppercase;
+
+  padding: 12px 20px;
+  margin: 0 5px;
+
+  background-color: #a8f6ce;
+  color: #000;
+
+  border-radius: 18px;
+  border: 1px solid transparent;
+
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+  :hover {
+    border: 1px solid #a8f6ce;
+    background-color: #000;
+    color: #fff;
+  }
+
+  ${mixin.clickable};
 `

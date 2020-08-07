@@ -1,5 +1,4 @@
 /* istanbul ignore file */
-/* Ignored due to video rendering issue in tests */
 
 import React from 'react'
 import Head from 'next/head'
@@ -7,7 +6,15 @@ import Head from 'next/head'
 import Nav from '@components/nav'
 import { NavRoutes } from '@utils/constants/nav_routes'
 
-import { Page, Container, Main, Video, Title, Description } from './styles'
+import {
+  Page,
+  Container,
+  Main,
+  Title,
+  Description,
+  IconRow,
+  SocialIcon,
+} from './styles'
 
 const Home = () => {
   const ANIMATION_DELAY = 0.2
@@ -31,21 +38,6 @@ const Home = () => {
       />
 
       <Container>
-        {/* <Video
-          src="https://firebasestorage.googleapis.com/v0/b/unimetrics.appspot.com/o/stanford.mp4?alt=media&token=17b37e0a-ff7b-4d9a-9a4a-8699b7c820e6"
-          playsinline
-          loop
-          autoPlay
-          muted
-          preload="auto"
-          initial={{ opacity: 0, y: DELTA_Y }}
-          animate={{ opacity: 0.15, y: 0 }}
-          transition={{
-            delay: 0.5,
-            duration: ANIMATION_DURATION,
-            ease: TRANSITION_EASE_IN,
-          }}
-        /> */}
         <Main>
           <Title
             initial={{ opacity: 0, y: DELTA_Y }}
@@ -56,7 +48,7 @@ const Home = () => {
               ease: TRANSITION_EASE_IN,
             }}
           >
-            Title
+            Marko Elez
           </Title>
 
           <Description
@@ -68,8 +60,18 @@ const Home = () => {
               ease: TRANSITION_EASE_IN,
             }}
           >
-            Subtitle
+            Full-stack software engineer
           </Description>
+
+          <IconRow>
+            <SocialIcon href={`mailto:markoelez7@gmail.com}`} target="_blank">
+              Email
+            </SocialIcon>
+            <SocialIcon href="http://github.com/markoelez" target="_blank">
+              GitHub
+            </SocialIcon>
+            <SocialIcon>Resume</SocialIcon>
+          </IconRow>
         </Main>
       </Container>
     </Page>
